@@ -18,7 +18,7 @@ let spiralMatrix = function(R, C, r0, c0) {
 
   while (result.length < R * C) {
     let insideGrid = c > -1 && c < C && (r > -1 && r < R)
-    if (insideGrid) result.push([r, c])
+    if (insideGrid) result[result.length] = [r, c]
 
     if (direction === DIRECTION.RIGHT) {
       let touchingRightWall = c === rightWall
