@@ -1,18 +1,18 @@
-function myFactoryObjects() {
+function FactoryObjects() {
   let privatePropOne
   let privatePropTwo
-  return {
-    setPrivatePropOne: function(value) {
-      privatePropOne = value
-    },
-    getPrivatePropOne: function() {
-      return privatePropOne
-    },
-    setPrivatePropTwo: function(value) {
-      privatePropTwo = value
-    },
-    getPrivatePropTwo: function() {
-      return privatePropTwo
-    }
+
+  this.setPrivatePropOne = function(value) {
+    privatePropOne = value
+  }
+  this.getPrivatePropOne = function() {
+    return privatePropOne
+  }
+  
+  this.setPrivatePropTwo = function(value) {
+    privatePropTwo = value
+  }
+  this.getPrivatePropTwo = function() {
+    return privatePropTwo
   }
 }
