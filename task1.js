@@ -1,18 +1,23 @@
-function FactoryObjects() {
-  let privatePropOne
-  let privatePropTwo
+function AccountBalance() {
+  //private props
+  let debit = 0
+  let credit = 0
 
-  this.setPrivatePropOne = function(value) {
-    privatePropOne = value
+  //public interface
+  this.addDebit = function(value) {
+    if (!isNaN(+value)) debit += value
   }
-  this.getPrivatePropOne = function() {
-    return privatePropOne
+
+  this.addCredit = function(value) {
+    if (!isNaN(+value)) credit += value
   }
-  
-  this.setPrivatePropTwo = function(value) {
-    privatePropTwo = value
+
+  this.calcBalance = function() {
+    return debit - credit
   }
-  this.getPrivatePropTwo = function() {
-    return privatePropTwo
+
+  this.clear = function() {
+    debit = 0
+    credit = 0
   }
 }
